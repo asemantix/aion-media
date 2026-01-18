@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AION ASEMANTIX™ | Brochure Institutionnelle</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --black: #08080a;
+            --black-light: #0d0d10;
+            --white: #f8f8f8;
+            --gold: #c9a962;
+            --gold-light: #e0c88a;
+            --gold-dark: #8a7340;
+            --gray-300: #a0a0a0;
+            --gray-500: #606060;
+            --gray-700: #2a2a2e;
+            --gray-800: #1a1a1e;
+            --cyan: #00d4ff;
+            --teal: #00ffaa;
+            --purple: #a855f7;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.8;
+            font-size: 20px;
+        }
+
+        ::selection { background: var(--gold); color: var(--black); }
+
+        /* ========================================
+           NAVIGATION ÉLÉGANTE PREMIUM
+        ======================================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: linear-gradient(180deg, rgba(8, 8, 10, 0.98) 0%, rgba(8, 8, 10, 0.92) 100%);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 5%;
+            right: 5%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(201, 169, 98, 0.4), transparent);
+        }
+
+        .navbar-brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 0.3em;
+            font-weight: 500;
+            transition: all 0.4s ease;
+        }
+
+        .navbar-brand:hover {
+            text-shadow: 0 0 30px rgba(201, 169, 98, 0.6);
+        }
+
+        .navbar-links {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .navbar-links a {
+            font-family: 'Inter', sans-serif;
+            color: var(--gray-300);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: all 0.4s ease;
+            font-weight: 400;
+        }
+
+        .navbar-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width 0.4s ease;
+        }
+
+        .navbar-links a:hover {
+            color: var(--white);
+        }
+
+        .navbar-links a:hover::after {
+            width: 100%;
+        }
+
+        .navbar-links a.active {
+            color: var(--gold);
+        }
+
+        .navbar-links a.active::after {
+            width: 6px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+            bottom: -8px;
+        }
+
+        .navbar-links .site-link {
+            color: var(--cyan);
+            position: relative;
+        }
+
+        .navbar-links .site-link::before {
+            content: '◈';
+            margin-right: 0.6rem;
+            font-size: 0.7rem;
+            opacity: 0.8;
+        }
+
+        .navbar-links .site-link:hover {
+            color: var(--teal);
+            text-shadow: 0 0 20px rgba(0, 255, 170, 0.5);
+        }
+
+        .navbar-links .site-link::after {
+            display: none;
+        }
+
+        /* ========================================
+           COVER PAGE - LOGO GÉANT ANIMÉ
+        ======================================== */
+        .cover {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 8rem 3rem 4rem;
+        }
+
+        .cover::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: 
+                linear-gradient(rgba(201, 169, 98, 0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(201, 169, 98, 0.015) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .cover-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .cover-logo {
+            width: 90%;
+            max-width: 950px;
+            margin: 0 auto 3rem;
+        }
+
+        .cover-logo img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 80px rgba(0, 212, 255, 0.15));
+        }
+
+        .cover-revolution {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4.5rem;
+            font-style: italic;
+            color: var(--cyan);
+            margin-bottom: 3rem;
+            text-shadow: 0 0 80px rgba(0, 212, 255, 0.4);
+        }
+
+        .cover-stats {
+            display: flex;
+            justify-content: center;
+            gap: 6rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item { text-align: center; }
+
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 6rem;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            color: var(--gray-300);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+            font-weight: 300;
+        }
+
+        .cover-footer {
+            position: absolute;
+            bottom: 2rem;
+            font-size: 1rem;
+            color: var(--gray-500);
+            letter-spacing: 0.1em;
+        }
+
+        /* ========================================
+           SECTIONS COMMON
+        ======================================== */
+        section {
+            padding: 8rem 4rem;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.1rem;
+            color: var(--gold);
+            letter-spacing: 0.3em;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4.5rem;
+            font-weight: 400;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title .gold { color: var(--gold); }
+        .section-title .cyan { color: var(--cyan); }
+
+        .section-subtitle {
+            font-size: 1.4rem;
+            color: var(--gray-300);
+            max-width: 900px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* ========================================
+           PROBLEM SECTION
+        ======================================== */
+        .problem {
+            background: linear-gradient(180deg, var(--black) 0%, var(--black-light) 100%);
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .problem-card {
+            background: rgba(239, 68, 68, 0.05);
+            border: 1px solid rgba(239, 68, 68, 0.25);
+            padding: 3rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .problem-card:hover {
+            border-color: rgba(239, 68, 68, 0.4);
+        }
+
+        .problem-card::before {
+            content: '✗';
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 2.5rem;
+            color: #ef4444;
+            opacity: 0.4;
+        }
+
+        .problem-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: #ef4444;
+            margin-bottom: 1.2rem;
+        }
+
+        .problem-card p {
+            font-size: 1.2rem;
+            color: var(--gray-300);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .problem-highlight {
+            grid-column: span 2;
+            background: rgba(239, 68, 68, 0.08);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            padding: 4rem;
+            text-align: center;
+        }
+
+        .problem-highlight h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            color: #ef4444;
+            margin-bottom: 1.5rem;
+        }
+
+        .problem-highlight p {
+            font-size: 1.5rem;
+            color: var(--white);
+            font-weight: 300;
+        }
+
+        /* ========================================
+           PIEUVRE SECTION
+        ======================================== */
+        .pieuvre {
+            background: var(--black);
+        }
+
+        .pieuvre-intro {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .pieuvre-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.3rem;
+            font-style: italic;
+            color: var(--gold);
+            max-width: 1100px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .pieuvre-powers {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2.5rem;
+            margin: 5rem 0;
+        }
+
+        .power-card {
+            background: linear-gradient(180deg, var(--gray-800) 0%, rgba(26, 26, 30, 0.5) 100%);
+            border: 1px solid var(--gray-700);
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .power-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-8px);
+        }
+
+        .power-icon {
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .power-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .power-card p {
+            font-size: 1.15rem;
+            color: var(--gray-300);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .pieuvre-summary {
+            background: linear-gradient(135deg, rgba(201, 169, 98, 0.08) 0%, rgba(0, 212, 255, 0.04) 100%);
+            border: 1px solid rgba(201, 169, 98, 0.3);
+            padding: 4rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .pieuvre-summary p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.9rem;
+            color: var(--white);
+            line-height: 1.9;
+        }
+
+        .pieuvre-summary .highlight {
+            color: var(--cyan);
+        }
+
+        /* ========================================
+           LIQUID COMPUTER SECTION
+        ======================================== */
+        .liquid {
+            background: linear-gradient(180deg, var(--black-light) 0%, var(--black) 50%, var(--black-light) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .liquid::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: 
+                radial-gradient(ellipse at 30% 20%, rgba(0, 212, 255, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(168, 85, 247, 0.06) 0%, transparent 50%);
+        }
+
+        .liquid-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .liquid-hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .liquid-tagline {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.4rem;
+            color: var(--gold);
+            letter-spacing: 0.25em;
+        }
+
+        .liquid-description {
+            font-size: 1.4rem;
+            color: var(--gray-300);
+            text-align: center;
+            max-width: 1000px;
+            margin: 2rem auto 5rem;
+            line-height: 1.9;
+            font-weight: 300;
+        }
+
+        .liquid-description strong {
+            color: var(--white);
+        }
+
+        .liquid-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin: 4rem 0;
+            padding: 3rem;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--cyan);
+        }
+
+        .liquid-flow::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 20%;
+            right: 20%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+        }
+
+        .flow-node {
+            background: var(--gray-800);
+            border: 1px solid var(--gray-600);
+            padding: 1.5rem 2.5rem;
+            text-align: center;
+            min-width: 150px;
+            transition: all 0.3s ease;
+        }
+
+        .flow-node:hover {
+            border-color: var(--cyan);
+            box-shadow: 0 0 25px rgba(0, 212, 255, 0.2);
+        }
+
+        .flow-node .icon {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .flow-node .label {
+            font-size: 1.1rem;
+            color: var(--gray-300);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .flow-arrow {
+            font-size: 2.2rem;
+            color: var(--gold);
+        }
+
+        .liquid-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 5rem;
+        }
+
+        .liquid-feature {
+            background: var(--black);
+            border: 1px solid var(--gray-700);
+            padding: 3rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .liquid-feature:hover {
+            border-color: var(--cyan);
+        }
+
+        .liquid-feature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--cyan), var(--purple));
+        }
+
+        .liquid-feature h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--cyan);
+            margin-bottom: 1rem;
+        }
+
+        .liquid-feature p {
+            font-size: 1.15rem;
+            color: var(--gray-300);
+            font-weight: 300;
+        }
+
+        /* ========================================
+           MARS SECTION
+        ======================================== */
+        .mars {
+            background: var(--black);
+            text-align: center;
+        }
+
+        .mars-box {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.08) 0%, rgba(239, 68, 68, 0.08) 100%);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            padding: 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mars-box::before {
+            content: '🔴';
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 4.5rem;
+            opacity: 0.25;
+        }
+
+        .mars-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.2rem;
+            color: var(--purple);
+            margin-bottom: 2rem;
+        }
+
+        .mars-text {
+            font-size: 1.4rem;
+            color: var(--white);
+            margin-bottom: 2rem;
+            line-height: 1.9;
+            font-weight: 300;
+        }
+
+        .mars-highlight {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.8rem;
+            color: var(--teal);
+            margin: 2.5rem 0;
+            text-shadow: 0 0 30px rgba(0, 255, 170, 0.4);
+        }
+
+        .mars-explanation {
+            font-size: 1.25rem;
+            color: var(--gray-300);
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* ========================================
+           PILLARS SECTION
+        ======================================== */
+        .pillars {
+            background: linear-gradient(180deg, var(--black-light) 0%, var(--black) 100%);
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .pillar-card {
+            background: var(--black);
+            border: 1px solid var(--gray-700);
+            padding: 3.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .pillar-card:hover {
+            border-color: rgba(201, 169, 98, 0.4);
+        }
+
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gold);
+        }
+
+        .pillar-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            color: var(--gold);
+            letter-spacing: 0.2em;
+            margin-bottom: 1.2rem;
+        }
+
+        .pillar-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 1.2rem;
+        }
+
+        .pillar-card h3 .highlight { color: var(--cyan); }
+
+        .pillar-card > p {
+            font-size: 1.2rem;
+            color: var(--gray-300);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .pillar-formula {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.5rem;
+            color: var(--teal);
+            background: rgba(0, 255, 170, 0.08);
+            padding: 1.2rem 1.8rem;
+            border-left: 4px solid var(--teal);
+        }
+
+        .pillar-list {
+            list-style: none;
+        }
+
+        .pillar-list li {
+            font-size: 1.15rem;
+            color: var(--gray-300);
+            padding: 0.6rem 0;
+            padding-left: 2rem;
+            position: relative;
+            font-weight: 300;
+        }
+
+        .pillar-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+
+        /* ========================================
+           QUANTUM SECTION
+        ======================================== */
+        .quantum {
+            background: var(--black);
+            text-align: center;
+        }
+
+        .quantum-box {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.08) 0%, rgba(168, 85, 247, 0.08) 100%);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            padding: 5rem;
+            position: relative;
+        }
+
+        .quantum-box::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 15%;
+            right: 15%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+        }
+
+        .quantum-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2.8rem;
+            color: var(--cyan);
+            margin-bottom: 2.5rem;
+            text-shadow: 0 0 40px rgba(0, 212, 255, 0.4);
+        }
+
+        .quantum-text {
+            font-size: 1.4rem;
+            color: var(--white);
+            margin-bottom: 2.5rem;
+            line-height: 1.9;
+            font-weight: 300;
+        }
+
+        .quantum-emphasis {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        /* ========================================
+           APPLICATIONS SECTION
+        ======================================== */
+        .applications {
+            background: var(--black-light);
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        .app-card {
+            background: var(--black);
+            border: 1px solid var(--gray-700);
+            padding: 3rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .app-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+        }
+
+        .app-icon {
+            font-size: 4.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .app-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .app-card p {
+            font-size: 1.1rem;
+            color: var(--gray-300);
+            font-weight: 300;
+        }
+
+        /* ========================================
+           PORTFOLIO SECTION
+        ======================================== */
+        .portfolio {
+            background: var(--black);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .division-card {
+            background: linear-gradient(180deg, var(--gray-800) 0%, rgba(26, 26, 30, 0.5) 100%);
+            border: 1px solid var(--gray-700);
+            padding: 2.5rem 1rem;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .division-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .division-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+        }
+
+        .division-card.privacy::before { background: #00d4ff; }
+        .division-card.quantum-div::before { background: #a855f7; }
+        .division-card.tactical::before { background: #22c55e; }
+        .division-card.mesh::before { background: #eab308; }
+        .division-card.fortress::before { background: #ef4444; }
+        .division-card.core::before { background: #f97316; }
+        .division-card.tute::before { background: #00ffaa; }
+
+        .division-name {
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .division-count {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            color: var(--gold);
+        }
+
+        .division-label {
+            font-size: 0.95rem;
+            color: var(--gray-500);
+        }
+
+        .portfolio-total {
+            text-align: center;
+            padding: 4rem;
+            background: linear-gradient(135deg, rgba(201, 169, 98, 0.1) 0%, rgba(201, 169, 98, 0.03) 100%);
+            border: 1px solid rgba(201, 169, 98, 0.3);
+        }
+
+        .portfolio-total-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 7rem;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .portfolio-total-label {
+            font-size: 1.2rem;
+            color: var(--gray-300);
+            letter-spacing: 0.1em;
+            font-weight: 300;
+        }
+
+        /* ========================================
+           CONTACT SECTION
+        ======================================== */
+        .contact {
+            background: linear-gradient(180deg, var(--black) 0%, var(--black-light) 100%);
+            text-align: center;
+        }
+
+        .contact-box {
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(180deg, var(--gray-800) 0%, rgba(26, 26, 30, 0.7) 100%);
+            border: 1px solid var(--gold-dark);
+            padding: 5rem;
+        }
+
+        .contact h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.2rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-era {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-style: italic;
+            color: var(--cyan);
+            margin-bottom: 2.5rem;
+        }
+
+        .contact > .contact-box > p {
+            font-size: 1.3rem;
+            color: var(--gray-300);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .contact-info {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2rem;
+            color: var(--white);
+        }
+
+        .contact-info a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--gold-light);
+        }
+
+        .contact-info p {
+            margin-bottom: 0.8rem;
+        }
+
+        /* ========================================
+           FOOTER
+        ======================================== */
+        footer {
+            text-align: center;
+            padding: 4rem;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 10%;
+            right: 10%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(201, 169, 98, 0.3), transparent);
+        }
+
+        .footer-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            letter-spacing: 0.3em;
+            color: var(--gold);
+            margin-bottom: 1.2rem;
+        }
+
+        .footer-legal {
+            font-size: 1rem;
+            color: var(--gray-500);
+            font-weight: 300;
+        }
+
+        /* ========================================
+           RESPONSIVE
+        ======================================== */
+        @media (max-width: 1200px) {
+            .pillars-grid { grid-template-columns: 1fr; }
+            .apps-grid { grid-template-columns: repeat(2, 1fr); }
+            .portfolio-grid { grid-template-columns: repeat(4, 1fr); }
+            .pieuvre-powers { grid-template-columns: repeat(2, 1fr); }
+            .liquid-features { grid-template-columns: 1fr; }
+            .navbar { padding: 1.2rem 3rem; }
+            .navbar-links { gap: 2.5rem; }
+        }
+
+        @media (max-width: 768px) {
+            body { font-size: 18px; }
+            section { padding: 5rem 2rem; }
+            .cover-revolution { font-size: 3rem; }
+            .cover-stats { flex-direction: column; gap: 2rem; }
+            .problem-grid { grid-template-columns: 1fr; }
+            .problem-highlight { grid-column: span 1; }
+            .apps-grid { grid-template-columns: 1fr; }
+            .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+            .pieuvre-powers { grid-template-columns: 1fr; }
+            .liquid-flow { flex-direction: column; }
+            .flow-arrow { transform: rotate(90deg); }
+            .section-title { font-size: 3rem; }
+            .navbar { padding: 1rem 2rem; }
+            .navbar-links { gap: 2rem; }
+            .navbar-links a { font-size: 0.8rem; letter-spacing: 0.15em; }
+            .cover { padding-top: 7rem; }
+        }
+
+        @media (max-width: 600px) {
+            .navbar { padding: 1rem 1.5rem; }
+            .navbar-links { gap: 1.2rem; }
+            .navbar-links a { font-size: 0.7rem; letter-spacing: 0.1em; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Élégante -->
+<nav class="navbar">
+    <a href="index.html" class="navbar-brand">AION</a>
+    <div class="navbar-links">
+        <a href="index.html">One Pager</a>
+        <a href="AION_BROCHURE.html" class="active">Brochure</a>
+        <a href="https://www.asemantix.tech" target="_blank" class="site-link">Site Web</a>
+    </div>
+</nav>
+
+<!-- COVER PAGE - LOGO GÉANT ANIMÉ -->
+<section class="cover">
+    <div class="cover-content">
+        <div class="cover-logo">
+            <img src="AION_HERO_ANIMATED.gif" alt="AION ASEMANTIX - Harvest Now, Decrypt Never">
+        </div>
+        <p class="cover-revolution">L'Ordinateur Liquide</p>
+        <div class="cover-stats">
+            <div class="stat-item">
+                <div class="stat-number">35</div>
+                <div class="stat-label">Brevets déposés</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">7</div>
+                <div class="stat-label">Divisions</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Durée de protection</div>
+            </div>
+        </div>
+    </div>
+    <div class="cover-footer">© 2026 AION ASEMANTIX™ • Tous droits réservés</div>
+</section>
+
+<!-- PROBLEM SECTION -->
+<section class="problem">
+    <div class="section-header">
+        <div class="section-number">01 • Le Constat</div>
+        <h2 class="section-title">Le monde numérique est <span class="gold">prisonnier</span></h2>
+        <p class="section-subtitle">L'architecture actuelle d'Internet enchaîne toutes les communications à une infrastructure traçable</p>
+    </div>
+    <div class="problem-grid">
+        <div class="problem-card">
+            <h3>Adresses IP : votre empreinte digitale</h3>
+            <p>Chaque connexion révèle votre identité, votre localisation, vos habitudes. Les métadonnées sont plus révélatrices que le contenu.</p>
+        </div>
+        <div class="problem-card">
+            <h3>Infrastructure en étoile</h3>
+            <p>Dépendance aux serveurs centraux : NTP, DNS, GPS. Points uniques de défaillance, de surveillance, de contrôle.</p>
+        </div>
+        <div class="problem-card">
+            <h3>Chiffrement : une illusion temporaire</h3>
+            <p>Les ordinateurs quantiques casseront RSA et ECC. Les agences stockent aujourd'hui pour déchiffrer demain.</p>
+        </div>
+        <div class="problem-card">
+            <h3>Identifiants : des chaînes invisibles</h3>
+            <p>IMSI, MAC, cookies, empreintes navigateur. Chaque réseau trace, chaque handover expose.</p>
+        </div>
+        <div class="problem-highlight">
+            <h3>⚠️ "Harvest Now, Decrypt Later"</h3>
+            <p>Les services de renseignement stockent massivement les communications chiffrées.<br>D'ici 2030, les ordinateurs quantiques pourront tout lire.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PIEUVRE SECTION -->
+<section class="pieuvre">
+    <div class="section-header">
+        <div class="section-number">02 • La Métaphore</div>
+        <h2 class="section-title">La <span class="gold">Pieuvre</span></h2>
+        <p class="section-subtitle">Architecture biomimétique inspirée du prédateur le plus insaisissable des océans</p>
+    </div>
+    <div class="pieuvre-intro">
+        <p class="pieuvre-quote">"La pieuvre n'a pas un cerveau, elle en a neuf. Elle ne fuit pas ses prédateurs — elle disparaît."</p>
+    </div>
+    <div class="pieuvre-powers">
+        <div class="power-card">
+            <span class="power-icon">🧠</span>
+            <h4>9 cerveaux</h4>
+            <p>Intelligence distribuée. Pas de point central de défaillance.</p>
+        </div>
+        <div class="power-card">
+            <span class="power-icon">🎨</span>
+            <h4>Métamorphose</h4>
+            <p>Change de couleur, texture, forme. Devient invisible à volonté.</p>
+        </div>
+        <div class="power-card">
+            <span class="power-icon">🌑</span>
+            <h4>Encre d'attaque</h4>
+            <p>Projette un nuage opaque pour aveugler l'ennemi. Défense offensive.</p>
+        </div>
+        <div class="power-card">
+            <span class="power-icon">🦑</span>
+            <h4>8 bras opportunistes</h4>
+            <p>Canaux multiples et indépendants. Impossible à capturer.</p>
+        </div>
+    </div>
+    <div class="pieuvre-summary">
+        <p>Nos données <span class="highlight">se métamorphosent</span> en bruit statistique — invisibles.<br>
+        Nos fragments <span class="highlight">voyagent sur 8 canaux</span> — insaisissables.<br>
+        Notre encre <span class="highlight">aveugle les attaquants</span> — ils ne savent même pas qu'ils cherchent.</p>
+    </div>
+</section>
+
+<!-- LIQUID COMPUTER SECTION -->
+<section class="liquid">
+    <div class="liquid-content">
+        <div class="section-header">
+            <div class="section-number">03 • La Révolution</div>
+            <h2 class="section-title">L'<span class="cyan">Ordinateur Liquide</span></h2>
+            <p class="section-subtitle">Une computation qui s'affranchit de toute matière, de toute infrastructure</p>
+        </div>
+        <div class="liquid-hero">
+            <p class="liquid-tagline">Échapper à la toile • Devenir l'eau</p>
+        </div>
+        <p class="liquid-description">L'informatique traditionnelle est <strong>solide</strong> : serveurs fixes, adresses permanentes.<br><br>
+        AION ASEMANTIX introduit l'<strong>Ordinateur Liquide</strong> : une computation qui coule entre les réseaux, change de forme à chaque instant, ne laisse aucune trace.</p>
+        <div class="liquid-flow">
+            <div class="flow-node"><div class="icon">📡</div><div class="label">Radio</div></div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node"><div class="icon">💎</div><div class="label">Optique</div></div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node"><div class="icon">🛰️</div><div class="label">Satellite</div></div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node"><div class="icon">🌐</div><div class="label">HTTP</div></div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node"><div class="icon">🔴</div><div class="label">Mars</div></div>
+        </div>
+        <div class="liquid-features">
+            <div class="liquid-feature"><h4>Voyage en radio</h4><p>Les fragments démarrent sur les ondes hertziennes — invisibles, omniprésents.</p></div>
+            <div class="liquid-feature"><h4>Rebondit en optique</h4><p>Transition vers la fibre, la lumière. Changement de médium, changement d'identité.</p></div>
+            <div class="liquid-feature"><h4>Atterrit en HTTP</h4><p>Reconstitution uniquement par le destinataire légitime. Pour tous les autres : du bruit blanc.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- MARS SECTION -->
+<section class="mars">
+    <div class="section-header">
+        <div class="section-number">04 • L'impossible devient possible</div>
+        <h2 class="section-title">Communiquer avec <span class="gold">Mars</span></h2>
+    </div>
+    <div class="mars-box">
+        <h3 class="mars-title">Sans connexion Internet</h3>
+        <p class="mars-text">L'architecture AION permet une communication interplanétaire sans dépendre d'une infrastructure Internet centralisée.</p>
+        <p class="mars-highlight">Radio → Satellite → Deep Space Network → Mars</p>
+        <p class="mars-explanation">Chaque fragment porte son propre contexte, sa propre temporalité (τ), sa propre identité éphémère. Il n'a besoin d'aucun serveur central, d'aucun DNS, d'aucun NTP.<br><br>Un fragment peut voyager vers Mars et être reconstitué des mois plus tard — <strong>sans jamais avoir touché Internet</strong>.</p>
+    </div>
+</section>
+
+<!-- PILLARS SECTION -->
+<section class="pillars">
+    <div class="section-header">
+        <div class="section-number">05 • Les Piliers Technologiques</div>
+        <h2 class="section-title">Quatre innovations <span class="gold">fondamentales</span></h2>
+    </div>
+    <div class="pillars-grid">
+        <div class="pillar-card">
+            <div class="pillar-number">Pilier 01</div>
+            <h3>L'<span class="highlight">Asémanticité</span></h3>
+            <p>Les données sont statistiquement indistinguables du bruit cosmique.</p>
+            <ul class="pillar-list">
+                <li>Fragments sans signification intrinsèque</li>
+                <li>Distribution = bruit blanc</li>
+                <li>Zéro métadonnée exploitable</li>
+            </ul>
+        </div>
+        <div class="pillar-card">
+            <div class="pillar-number">Pilier 02</div>
+            <h3>L'<span class="highlight">Horloge Énergétique</span></h3>
+            <p>Le temps dérivé de la consommation énergétique locale.</p>
+            <div class="pillar-formula">τ = E / (P_nom + ε)</div>
+            <ul class="pillar-list">
+                <li>Référence temporelle souveraine</li>
+                <li>Impossible à prédire ou falsifier</li>
+            </ul>
+        </div>
+        <div class="pillar-card">
+            <div class="pillar-number">Pilier 03</div>
+            <h3>Les <span class="highlight">Canaux Opportunistes</span></h3>
+            <p>Communication via tous les réseaux avec identifiants non corrélables.</p>
+            <ul class="pillar-list">
+                <li>Satellite (LEO, MEO, GEO)</li>
+                <li>Cellulaire (4G, 5G, 6G)</li>
+                <li>WiFi, LoRa, Mesh, Bluetooth</li>
+                <li>Bascule transparente et non traçable</li>
+            </ul>
+        </div>
+        <div class="pillar-card">
+            <div class="pillar-number">Pilier 04</div>
+            <h3>La <span class="highlight">Fragmentation</span></h3>
+            <p>Les données fragmentées et distribuées sur plusieurs réseaux.</p>
+            <ul class="pillar-list">
+                <li>Fragments distribués sur N réseaux</li>
+                <li>Reconstitution impossible par un seul acteur</li>
+                <li>Résistance aux coupures et censure</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- QUANTUM SECTION -->
+<section class="quantum">
+    <div class="section-header">
+        <div class="section-number">06 • Sécurité Post-Quantique</div>
+        <h2 class="section-title">Harvest Now, <span class="gold">Decrypt Never</span></h2>
+    </div>
+    <div class="quantum-box">
+        <h3 class="quantum-title">Notre Promesse</h3>
+        <p class="quantum-text">Les agences stockent les communications chiffrées en attendant les ordinateurs quantiques.<br><br><strong>Avec AION ASEMANTIX, même un ordinateur quantique ne peut rien décrypter.</strong><br><br>Pourquoi ? Parce qu'il n'y a rien à décrypter. Les données sont du bruit aléatoire.</p>
+        <p class="quantum-emphasis">Quoi qu'ils cassent, ce sera du bruit.</p>
+    </div>
+</section>
+
+<!-- APPLICATIONS SECTION -->
+<section class="applications">
+    <div class="section-header">
+        <div class="section-number">07 • Applications</div>
+        <h2 class="section-title">Marchés <span class="gold">stratégiques</span></h2>
+    </div>
+    <div class="apps-grid">
+        <div class="app-card"><div class="app-icon">🏦</div><h4>Finance</h4><p>Transactions anonymes vérifiables. Protection des données bancaires.</p></div>
+        <div class="app-card"><div class="app-icon">🏥</div><h4>Santé</h4><p>Dossiers médicaux souverains. Échange patient-praticien sans tiers.</p></div>
+        <div class="app-card"><div class="app-icon">🏛️</div><h4>Défense</h4><p>Communications classifiées. Infrastructure critique. Souveraineté.</p></div>
+        <div class="app-card"><div class="app-icon">📡</div><h4>Télécommunications</h4><p>Internet mobile sans IP fixe. Communication post-infrastructure.</p></div>
+        <div class="app-card"><div class="app-icon">🚀</div><h4>Spatial</h4><p>Communication interplanétaire. Constellations autonomes.</p></div>
+        <div class="app-card"><div class="app-icon">📰</div><h4>Journalisme</h4><p>Protection des sources. Lanceurs d'alerte. Liberté de la presse.</p></div>
+    </div>
+</section>
+
+<!-- PORTFOLIO SECTION -->
+<section class="portfolio">
+    <div class="section-header">
+        <div class="section-number">08 • Propriété Intellectuelle</div>
+        <h2 class="section-title">35 brevets • 7 <span class="gold">divisions</span></h2>
+    </div>
+    <div class="portfolio-grid">
+        <div class="division-card privacy"><div class="division-name">Privacy</div><div class="division-count">6</div><div class="division-label">brevets</div></div>
+        <div class="division-card quantum-div"><div class="division-name">Quantum</div><div class="division-count">5</div><div class="division-label">brevets</div></div>
+        <div class="division-card tactical"><div class="division-name">Tactical</div><div class="division-count">5</div><div class="division-label">brevets</div></div>
+        <div class="division-card mesh"><div class="division-name">Mesh</div><div class="division-count">4</div><div class="division-label">brevets</div></div>
+        <div class="division-card fortress"><div class="division-name">Fortress</div><div class="division-count">5</div><div class="division-label">brevets</div></div>
+        <div class="division-card core"><div class="division-name">Core</div><div class="division-count">4</div><div class="division-label">brevets</div></div>
+        <div class="division-card tute"><div class="division-name">Tute</div><div class="division-count">6</div><div class="division-label">brevets</div></div>
+    </div>
+    <div class="portfolio-total">
+        <div class="portfolio-total-number">35</div>
+        <div class="portfolio-total-label">Brevets déposés à l'INPI • France • 2024-2026</div>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact">
+    <div class="contact-box">
+        <h2>Entrons en contact</h2>
+        <p class="contact-era">L'ère de la souveraineté post-quantique a débuté.</p>
+        <p>AION ASEMANTIX recherche des partenaires stratégiques pour déployer l'Ordinateur Liquide.</p>
+        <div class="contact-info">
+            <p><strong>AION ASEMANTIX™</strong></p>
+            <p>Lyon, France</p>
+            <p><a href="mailto:asemantix@proton.me">asemantix@proton.me</a></p>
+            <p><a href="https://www.asemantix.tech" target="_blank">www.asemantix.tech</a></p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-logo">AION ASEMANTIX™</div>
+    <div class="footer-legal">© 2026 AION ASEMANTIX. Tous droits réservés. • 35 brevets déposés à l'INPI</div>
+</footer>
+
+</body>
+</html>

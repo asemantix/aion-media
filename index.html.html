@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AION ASEMANTIX™ | One Pager</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --black: #08080a;
+            --white: #f8f8f8;
+            --gold: #c9a962;
+            --gold-light: #e0c88a;
+            --gray-300: #a0a0a0;
+            --gray-700: #2a2a2e;
+            --gray-800: #1a1a1e;
+            --cyan: #00d4ff;
+            --teal: #00ffaa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.7;
+            font-size: 20px;
+        }
+
+        ::selection { background: var(--gold); color: var(--black); }
+
+        /* ========================================
+           NAVIGATION ÉLÉGANTE PREMIUM
+        ======================================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: linear-gradient(180deg, rgba(8, 8, 10, 0.98) 0%, rgba(8, 8, 10, 0.92) 100%);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 5%;
+            right: 5%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(201, 169, 98, 0.4), transparent);
+        }
+
+        .navbar-brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 0.3em;
+            font-weight: 500;
+            transition: all 0.4s ease;
+        }
+
+        .navbar-brand:hover {
+            text-shadow: 0 0 30px rgba(201, 169, 98, 0.6);
+        }
+
+        .navbar-links {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .navbar-links a {
+            font-family: 'Inter', sans-serif;
+            color: var(--gray-300);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: all 0.4s ease;
+            font-weight: 400;
+        }
+
+        .navbar-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width 0.4s ease;
+        }
+
+        .navbar-links a:hover {
+            color: var(--white);
+        }
+
+        .navbar-links a:hover::after {
+            width: 100%;
+        }
+
+        .navbar-links a.active {
+            color: var(--gold);
+        }
+
+        .navbar-links a.active::after {
+            width: 6px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+            bottom: -8px;
+        }
+
+        .navbar-links .site-link {
+            color: var(--cyan);
+            position: relative;
+        }
+
+        .navbar-links .site-link::before {
+            content: '◈';
+            margin-right: 0.6rem;
+            font-size: 0.7rem;
+            opacity: 0.8;
+        }
+
+        .navbar-links .site-link:hover {
+            color: var(--teal);
+            text-shadow: 0 0 20px rgba(0, 255, 170, 0.5);
+        }
+
+        .navbar-links .site-link::after {
+            display: none;
+        }
+
+        /* ========================================
+           HERO SECTION - LOGO GÉANT
+        ======================================== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: 
+                linear-gradient(rgba(201, 169, 98, 0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(201, 169, 98, 0.015) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-logo {
+            width: 90%;
+            max-width: 850px;
+            margin-bottom: 3rem;
+        }
+
+        .hero-logo img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 60px rgba(0, 212, 255, 0.15));
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 5rem;
+            font-weight: 400;
+            color: var(--cyan);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 80px rgba(0, 212, 255, 0.3);
+        }
+
+        .hero-tagline {
+            font-size: 1.5rem;
+            color: var(--gray-300);
+            max-width: 850px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* ========================================
+           PAGE CONTENT
+        ======================================== */
+        .page {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem;
+        }
+
+        /* Stats */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin: 5rem 0;
+        }
+
+        .stat {
+            text-align: center;
+            background: linear-gradient(180deg, var(--gray-800) 0%, rgba(26, 26, 30, 0.5) 100%);
+            border: 1px solid var(--gray-700);
+            padding: 3rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 5rem;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--gray-300);
+            letter-spacing: 0.12em;
+            margin-top: 1rem;
+            font-weight: 300;
+        }
+
+        /* Main Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            margin: 5rem 0;
+        }
+
+        /* Cards */
+        .card {
+            background: linear-gradient(180deg, var(--gray-800) 0%, rgba(26, 26, 30, 0.7) 100%);
+            border: 1px solid var(--gray-700);
+            padding: 3rem;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .card:hover {
+            border-color: rgba(201, 169, 98, 0.3);
+            transform: translateY(-4px);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background: var(--gold);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            color: var(--gold);
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .card-title .icon {
+            font-size: 1.8rem;
+        }
+
+        .card p {
+            font-size: 1.2rem;
+            color: var(--gray-300);
+            margin-bottom: 1.2rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .card ul {
+            list-style: none;
+            font-size: 1.15rem;
+            color: var(--gray-300);
+        }
+
+        .card ul li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+            font-weight: 300;
+        }
+
+        .card ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 1rem;
+        }
+
+        /* Problem Card */
+        .card.problem {
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+
+        .card.problem::before {
+            background: #ef4444;
+        }
+
+        .card.problem .card-title {
+            color: #ef4444;
+        }
+
+        /* Formula */
+        .formula {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.5rem;
+            color: var(--teal);
+            background: rgba(0, 255, 170, 0.08);
+            padding: 1.2rem 1.8rem;
+            margin-top: 1rem;
+            border-left: 3px solid var(--teal);
+        }
+
+        /* Flow Section */
+        .flow-section {
+            background: linear-gradient(180deg, var(--gray-800) 0%, rgba(26, 26, 30, 0.7) 100%);
+            border: 1px solid var(--cyan);
+            padding: 3.5rem;
+            text-align: center;
+            margin: 5rem 0;
+            position: relative;
+        }
+
+        .flow-section::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 20%;
+            right: 20%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+        }
+
+        .flow-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2rem;
+            color: var(--cyan);
+            letter-spacing: 0.12em;
+            margin-bottom: 2.5rem;
+        }
+
+        .flow-items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .flow-item {
+            background: var(--black);
+            border: 1px solid var(--gray-700);
+            padding: 1.2rem 2rem;
+            font-size: 1.2rem;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .flow-item:hover {
+            border-color: var(--cyan);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+
+        .flow-arrow {
+            color: var(--gold);
+            font-size: 1.8rem;
+        }
+
+        /* Applications */
+        .apps-row {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1.5rem;
+            margin: 5rem 0;
+        }
+
+        .app {
+            text-align: center;
+            padding: 2.5rem 1rem;
+            background: linear-gradient(180deg, var(--gray-800) 0%, rgba(26, 26, 30, 0.5) 100%);
+            border: 1px solid var(--gray-700);
+            transition: all 0.3s ease;
+        }
+
+        .app:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+        }
+
+        .app-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .app-name {
+            font-size: 1rem;
+            color: var(--gray-300);
+            letter-spacing: 0.08em;
+            font-weight: 300;
+        }
+
+        /* Footer */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 4rem;
+            margin-top: 5rem;
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 10%;
+            right: 10%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(201, 169, 98, 0.3), transparent);
+        }
+
+        .contact-info {
+            font-size: 1.2rem;
+            color: var(--gray-300);
+            font-weight: 300;
+        }
+
+        .contact-info strong {
+            color: var(--white);
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+
+        .contact-info a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--gold-light);
+        }
+
+        .footer-right {
+            text-align: right;
+        }
+
+        .era {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            font-style: italic;
+            color: var(--cyan);
+        }
+
+        .copyright {
+            font-size: 1.1rem;
+            color: var(--gray-300);
+            margin-top: 0.5rem;
+            font-weight: 300;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .apps-row { grid-template-columns: repeat(3, 1fr); }
+            .navbar { padding: 1.2rem 3rem; }
+            .navbar-links { gap: 2.5rem; }
+        }
+
+        @media (max-width: 900px) {
+            .main-grid { grid-template-columns: 1fr; }
+            .stats-row { grid-template-columns: repeat(2, 1fr); }
+            .footer { flex-direction: column; gap: 2rem; text-align: center; }
+            .footer-right { text-align: center; }
+            .hero h1 { font-size: 3.5rem; }
+            .navbar { padding: 1rem 2rem; }
+            .navbar-links { gap: 2rem; }
+            .navbar-links a { font-size: 0.8rem; letter-spacing: 0.15em; }
+        }
+
+        @media (max-width: 600px) {
+            body { font-size: 18px; }
+            .page { padding: 2rem 1.5rem; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero { padding-top: 7rem; }
+            .stats-row { grid-template-columns: 1fr; }
+            .apps-row { grid-template-columns: repeat(2, 1fr); }
+            .navbar { padding: 1rem 1.5rem; }
+            .navbar-links { gap: 1.2rem; }
+            .navbar-links a { font-size: 0.7rem; letter-spacing: 0.1em; }
+            .flow-items { flex-direction: column; }
+            .flow-arrow { transform: rotate(90deg); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Élégante -->
+<nav class="navbar">
+    <a href="index.html" class="navbar-brand">AION</a>
+    <div class="navbar-links">
+        <a href="index.html" class="active">One Pager</a>
+        <a href="AION_BROCHURE.html">Brochure</a>
+        <a href="https://www.asemantix.tech" target="_blank" class="site-link">Site Web</a>
+    </div>
+</nav>
+
+<!-- Hero avec LOGO GÉANT -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-logo">
+            <img src="AION_HERO_FINAL.png" alt="AION ASEMANTIX - Harvest Now, Decrypt Never">
+        </div>
+        <h1>L'Ordinateur Liquide</h1>
+        <p class="hero-tagline">
+            Une computation qui s'affranchit de toute matière, de toute infrastructure, de toute frontière.
+            Communication sans IP, sans traçage, sans menace quantique.
+        </p>
+    </div>
+</section>
+
+<div class="page">
+
+    <!-- Stats -->
+    <div class="stats-row">
+        <div class="stat">
+            <div class="stat-number">0</div>
+            <div class="stat-label">Adresse IP</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">0</div>
+            <div class="stat-label">Métadonnée</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">0</div>
+            <div class="stat-label">Infrastructure</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">∞</div>
+            <div class="stat-label">Protection</div>
+        </div>
+    </div>
+
+    <!-- Main Grid -->
+    <div class="main-grid">
+        
+        <!-- Problem -->
+        <div class="card problem">
+            <h3 class="card-title"><span class="icon">⚠️</span> Le Problème</h3>
+            <p><strong>"Harvest Now, Decrypt Later"</strong> — Les agences stockent vos données chiffrées aujourd'hui pour les déchiffrer demain avec les ordinateurs quantiques.</p>
+            <ul>
+                <li>Adresses IP = empreinte digitale permanente</li>
+                <li>Métadonnées plus révélatrices que le contenu</li>
+                <li>Infrastructure centralisée = surveillance</li>
+                <li>Chiffrement RSA/ECC cassable d'ici 2030</li>
+            </ul>
+        </div>
+
+        <!-- Solution -->
+        <div class="card">
+            <h3 class="card-title"><span class="icon">🦑</span> La Pieuvre</h3>
+            <p>Architecture biomimétique : <strong>9 cerveaux</strong> distribués, <strong>8 bras</strong> opportunistes, <strong>métamorphose</strong> instantanée, <strong>encre</strong> de camouflage.</p>
+            <ul>
+                <li>Données = bruit statistique indistinguable</li>
+                <li>Identifiants non corrélables par réseau</li>
+                <li>Handover aveugle entre technologies</li>
+                <li>Fragmentation multi-réseaux</li>
+            </ul>
+        </div>
+
+        <!-- Pillar 1 -->
+        <div class="card">
+            <h3 class="card-title"><span class="icon">🔮</span> Asémanticité</h3>
+            <p>Les données sont transformées pour être statistiquement indistinguables du bruit cosmique. Aucun observateur ne peut déterminer s'il y a un signal.</p>
+            <ul>
+                <li>Fragments sans signification intrinsèque</li>
+                <li>Zéro métadonnée exploitable</li>
+                <li>Quoi qu'ils cassent, ce sera du bruit</li>
+            </ul>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="card">
+            <h3 class="card-title"><span class="icon">⚡</span> Horloge Énergétique</h3>
+            <p>Le temps dérivé de la consommation énergétique locale. Indépendant de NTP, GPS, ou tout serveur externe.</p>
+            <div class="formula">τ = E / (P_nom + ε)</div>
+            <ul>
+                <li>Référence temporelle souveraine</li>
+                <li>Impossible à prédire ou falsifier</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Flow -->
+    <div class="flow-section">
+        <div class="flow-title">Voyage des fragments — Sans connexion Internet</div>
+        <div class="flow-items">
+            <span class="flow-item">📡 Radio</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-item">💎 Optique</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-item">🛰️ Satellite</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-item">🌐 HTTP</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-item">🔴 Mars</span>
+        </div>
+    </div>
+
+    <!-- Applications -->
+    <div class="apps-row">
+        <div class="app">
+            <div class="app-icon">🏦</div>
+            <div class="app-name">Finance</div>
+        </div>
+        <div class="app">
+            <div class="app-icon">🏥</div>
+            <div class="app-name">Santé</div>
+        </div>
+        <div class="app">
+            <div class="app-icon">🏛️</div>
+            <div class="app-name">Défense</div>
+        </div>
+        <div class="app">
+            <div class="app-icon">📡</div>
+            <div class="app-name">Télécom</div>
+        </div>
+        <div class="app">
+            <div class="app-icon">🚀</div>
+            <div class="app-name">Spatial</div>
+        </div>
+        <div class="app">
+            <div class="app-icon">📰</div>
+            <div class="app-name">Presse</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="contact-info">
+            <strong>AION ASEMANTIX™</strong><br>
+            Lyon, France<br>
+            <a href="mailto:asemantix@proton.me">asemantix@proton.me</a><br>
+            <a href="https://www.asemantix.tech" target="_blank">www.asemantix.tech</a>
+        </div>
+        <div class="footer-right">
+            <div class="era">L'ère de la souveraineté post-quantique a débuté.</div>
+            <div class="copyright">© 2026 AION ASEMANTIX • 35 brevets INPI</div>
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>
