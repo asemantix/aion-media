@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AION ASEMANTIX™ | One Pager | Harvest Now, Decrypt Never</title>
+    <meta name="description" content="AION ASEMANTIX - L'Ordinateur Liquide. 35 brevets. Souveraineté post-quantique.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --black: #08080a;
+            --white: #f8f8f8;
+            --gold: #c9a962;
+            --gray-300: #a0a0a0;
+            --gray-700: #2a2a2e;
+            --gray-800: #1a1a1e;
+            --cyan: #00d4ff;
+            --teal: #00ffaa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        ::selection { background: var(--gold); color: var(--black); }
+
+        .page {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--gray-700);
+            margin-bottom: 2rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-aion {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: 0.2em;
+            line-height: 1;
+        }
+
+        .logo-asemantix {
+            font-size: 0.7rem;
+            color: var(--gray-300);
+            letter-spacing: 0.15em;
+        }
+
+        .header-right {
+            text-align: right;
+        }
+
+        .slogan {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--teal);
+            letter-spacing: 0.05em;
+        }
+
+        .patents {
+            font-size: 0.75rem;
+            color: var(--gray-300);
+            margin-top: 0.3rem;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            color: var(--cyan);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-tagline {
+            font-size: 1rem;
+            color: var(--gray-300);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--gray-800);
+            border: 1px solid var(--gray-700);
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: var(--gold);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title .icon {
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            font-size: 0.85rem;
+            color: var(--gray-300);
+            margin-bottom: 0.8rem;
+        }
+
+        .card ul {
+            list-style: none;
+            font-size: 0.8rem;
+            color: var(--gray-300);
+        }
+
+        .card ul li {
+            padding: 0.2rem 0;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .card ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 0.7rem;
+        }
+
+        /* Problem Card */
+        .card.problem {
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+
+        .card.problem .card-title {
+            color: #ef4444;
+        }
+
+        /* Formula */
+        .formula {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--teal);
+            background: rgba(0, 255, 170, 0.1);
+            padding: 0.5rem 1rem;
+            margin-top: 0.5rem;
+            border-left: 2px solid var(--teal);
+        }
+
+        /* Flow Section */
+        .flow-section {
+            background: var(--gray-800);
+            border: 1px solid var(--cyan);
+            padding: 1.5rem;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .flow-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--cyan);
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .flow-items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .flow-item {
+            background: var(--black);
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+            color: var(--white);
+        }
+
+        .flow-arrow {
+            color: var(--gold);
+            font-size: 1rem;
+        }
+
+        /* Stats Row */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .stat {
+            text-align: center;
+            background: var(--gray-800);
+            border: 1px solid var(--gray-700);
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.65rem;
+            color: var(--gray-300);
+            letter-spacing: 0.1em;
+            margin-top: 0.3rem;
+        }
+
+        /* Applications */
+        .apps-row {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 0.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .app {
+            text-align: center;
+            padding: 0.8rem 0.5rem;
+            background: var(--gray-800);
+            border: 1px solid var(--gray-700);
+        }
+
+        .app-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .app-name {
+            font-size: 0.6rem;
+            color: var(--gray-300);
+            letter-spacing: 0.05em;
+        }
+
+        /* Footer */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--gray-700);
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            font-size: 0.75rem;
+            color: var(--gray-300);
+        }
+
+        .contact-info a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .footer-right {
+            text-align: right;
+        }
+
+        .era {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1rem;
+            font-style: italic;
+            color: var(--cyan);
+        }
+
+        .copyright {
+            font-size: 0.65rem;
+            color: var(--gray-300);
+            margin-top: 0.3rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-grid { grid-template-columns: 1fr; }
+            .stats-row { grid-template-columns: repeat(2, 1fr); }
+            .apps-row { grid-template-columns: repeat(3, 1fr); }
+            .header { flex-direction: column; gap: 1rem; text-align: center; }
+            .header-right { text-align: center; }
+            .footer { flex-direction: column; gap: 1rem; text-align: center; }
+            .footer-right { text-align: center; }
+        }
+
+        /* Print */
+        @media print {
+            body { background: white; color: black; }
+            .card { border: 1px solid #ccc; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-section">
+            <img src="AION_HERO_ANIMATED.gif" alt="AION" class="logo-img">
+            <div class="logo-text">
+                <span class="logo-aion">AION</span>
+                <span class="logo-asemantix">ASEMANTIX™</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="slogan">HARVEST NOW, DECRYPT NEVER.</div>
+            <div class="patents">35 brevets • 7 divisions • France</div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>L'Ordinateur Liquide</h1>
+        <p class="hero-tagline">
+            Une computation qui s'affranchit de toute matière, de toute infrastructure, de toute frontière.
+            Communication sans IP, sans traçage, sans menace quantique.
+        </p>
+    </section>
+
+    <!-- Stats -->
+    <div class="stats-row">
+        <div class="stat">
+            <div class="stat-number">0</div>
+            <div class="stat-label">ADRESSE IP</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">0</div>
+            <div class="stat-label">MÉTADONNÉE</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">0</div>
+            <div class="stat-label">INFRASTRUCTURE</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">∞</div>
+            <div class="stat-label">PROTECTION</div>
+        </div>
+    </div>
+
+    <!-- Main Grid -->
+    <div class="main-grid">
+        
+        <!-- Problem -->
+        <div class="card problem">
+            <h3 class="card-title"><span class="icon">⚠️</span> Le Problème</h3>
+            <p><strong>"Harvest Now, Decrypt Later"</strong> — Les agences stockent vos données chiffrées aujourd'hui pour les déchiffrer demain avec les ordinateurs quantiques.</p>
+            <ul>
+                <li>Adresses IP = empreinte digitale permanente</li>
+                <li>Métadonnées plus révélatrices que le contenu</li>
+                <li>Infrastructure centralisée = surveillance de masse</li>
+                <li>Chiffrement RSA/ECC cassable d'ici 2030</li>
+            </ul>
+        </div>
+
+        <!-- Solution -->
+        <div class="card">
+            <h3 class="card-title"><span class="icon">🦑</span> La Pieuvre</h3>
+            <p>Architecture biomimétique : <strong>9 cerveaux</strong> distribués, <strong>8 bras</strong> opportunistes, <strong>métamorphose</strong> instantanée, <strong>encre</strong> de camouflage.</p>
+            <ul>
+                <li>Données = bruit statistique indistinguable</li>
+                <li>Identifiants non corrélables par réseau</li>
+                <li>Handover aveugle entre technologies</li>
+                <li>Fragmentation multi-réseaux</li>
+            </ul>
+        </div>
+
+        <!-- Pillar 1 -->
+        <div class="card">
+            <h3 class="card-title"><span class="icon">🔮</span> Asémanticité</h3>
+            <p>Les données sont transformées pour être statistiquement indistinguables du bruit cosmique. Aucun observateur ne peut déterminer s'il y a un signal.</p>
+            <ul>
+                <li>Fragments sans signification intrinsèque</li>
+                <li>Zéro métadonnée exploitable</li>
+                <li>Quoi qu'ils cassent, ce sera du bruit</li>
+            </ul>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="card">
+            <h3 class="card-title"><span class="icon">⚡</span> Horloge Énergétique</h3>
+            <p>Le temps dérivé de la consommation énergétique locale. Indépendant de NTP, GPS, ou tout serveur externe.</p>
+            <div class="formula">τ = E / (P_nom + ε)</div>
+            <ul>
+                <li>Référence temporelle souveraine</li>
+                <li>Impossible à prédire ou falsifier</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Flow -->
+    <div class="flow-section">
+        <div class="flow-title">VOYAGE DES FRAGMENTS — SANS CONNEXION INTERNET</div>
+        <div class="flow-items">
+            <span class="flow-item">📡 Radio</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-item">💎 Optique</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-item">🛰️ Satellite</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-item">🌐 HTTP</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-item">🔴 Mars</span>
+        </div>
+    </div>
+
+    <!-- Applications -->
+    <div class="apps-row">
+        <div class="app">
+            <div class="app-icon">🏦</div>
+            <div class="app-name">FINANCE</div>
+        </div>
+        <div class="app">
+            <div class="app-icon">🏥</div>
+            <div class="app-name">SANTÉ</div>
+        </div>
+        <div class="app">
+            <div class="app-icon">🏛️</div>
+            <div class="app-name">DÉFENSE</div>
+        </div>
+        <div class="app">
+            <div class="app-icon">📡</div>
+            <div class="app-name">TÉLÉCOM</div>
+        </div>
+        <div class="app">
+            <div class="app-icon">🚀</div>
+            <div class="app-name">SPATIAL</div>
+        </div>
+        <div class="app">
+            <div class="app-icon">📰</div>
+            <div class="app-name">PRESSE</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="contact-info">
+            <strong>AION ASEMANTIX™</strong> • Lyon, France<br>
+            <a href="mailto:asemantix@proton.me">asemantix@proton.me</a> • 
+            <a href="https://www.asemantix.tech" target="_blank">www.asemantix.tech</a>
+        </div>
+        <div class="footer-right">
+            <div class="era">L'ère de la souveraineté post-quantique a débuté.</div>
+            <div class="copyright">© 2026 AION ASEMANTIX • 35 brevets INPI</div>
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>
