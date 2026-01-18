@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AION ASEMANTIX™ | Brochure Institutionnelle</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --black: #08080a;
+            --black-light: #0d0d10;
+            --white: #f8f8f8;
+            --white-dim: #c8c8c8;
+            --gold: #c9a962;
+            --gold-light: #e0c88a;
+            --gold-dark: #8a7340;
+            --gray-300: #a0a0a0;
+            --gray-500: #606060;
+            --gray-700: #2a2a2e;
+            --gray-800: #1a1a1e;
+            --cyan: #00d4ff;
+            --teal: #00ffaa;
+            --purple: #a855f7;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        ::selection { background: var(--gold); color: var(--black); }
+
+        /* ========================================
+           COVER PAGE
+        ======================================== */
+        .cover {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 3rem;
+        }
+
+        .cover::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: 
+                linear-gradient(rgba(201, 169, 98, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(201, 169, 98, 0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+            animation: gridPulse 8s ease-in-out infinite;
+        }
+
+        @keyframes gridPulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .cover-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 1000px;
+        }
+
+        .cover-logo {
+            margin-bottom: 3rem;
+        }
+
+        .cover-logo img {
+            max-width: 700px;
+            width: 100%;
+            height: auto;
+        }
+
+        .cover-revolution {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-style: italic;
+            color: var(--cyan);
+            margin-bottom: 3rem;
+            text-shadow: 0 0 40px rgba(0, 212, 255, 0.5);
+        }
+
+        .cover-stats {
+            display: flex;
+            justify-content: center;
+            gap: 5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item { text-align: center; }
+
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 5rem;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--gray-300);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+        }
+
+        .cover-footer {
+            position: absolute;
+            bottom: 2rem;
+            font-size: 1rem;
+            color: var(--gray-500);
+            letter-spacing: 0.1em;
+        }
+
+        /* ========================================
+           SECTIONS COMMON
+        ======================================== */
+        section {
+            padding: 6rem 4rem;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            color: var(--gold);
+            letter-spacing: 0.3em;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4rem;
+            font-weight: 400;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .section-title .gold { color: var(--gold); }
+        .section-title .cyan { color: var(--cyan); }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: var(--gray-300);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* ========================================
+           PROBLEM SECTION
+        ======================================== */
+        .problem {
+            background: linear-gradient(180deg, var(--black) 0%, var(--black-light) 100%);
+            padding: 6rem 4rem;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .problem-card {
+            background: rgba(239, 68, 68, 0.05);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            padding: 2.5rem;
+            position: relative;
+        }
+
+        .problem-card::before {
+            content: '✗';
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            color: #ef4444;
+            opacity: 0.5;
+        }
+
+        .problem-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: #ef4444;
+            margin-bottom: 1rem;
+        }
+
+        .problem-card p {
+            font-size: 1.1rem;
+            color: var(--gray-300);
+            line-height: 1.8;
+        }
+
+        .problem-highlight {
+            grid-column: span 2;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .problem-highlight h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: #ef4444;
+            margin-bottom: 1rem;
+        }
+
+        .problem-highlight p {
+            font-size: 1.4rem;
+            color: var(--white);
+        }
+
+        /* ========================================
+           PIEUVRE SECTION
+        ======================================== */
+        .pieuvre {
+            background: var(--black);
+            padding: 6rem 4rem;
+        }
+
+        .pieuvre-intro {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .pieuvre-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            font-style: italic;
+            color: var(--gold);
+            max-width: 1000px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+
+        .pieuvre-powers {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .power-card {
+            background: var(--gray-800);
+            border: 1px solid var(--gray-700);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .power-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .power-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .power-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .power-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .power-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: var(--gold);
+            margin-bottom: 0.8rem;
+        }
+
+        .power-card p {
+            font-size: 1.05rem;
+            color: var(--gray-300);
+            line-height: 1.7;
+        }
+
+        .pieuvre-summary {
+            background: linear-gradient(135deg, rgba(201, 169, 98, 0.1) 0%, rgba(0, 212, 255, 0.05) 100%);
+            border: 1px solid rgba(201, 169, 98, 0.3);
+            padding: 3.5rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .pieuvre-summary p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--white);
+            line-height: 1.8;
+        }
+
+        .pieuvre-summary .highlight {
+            color: var(--cyan);
+            font-weight: 500;
+        }
+
+        /* ========================================
+           LIQUID COMPUTER SECTION
+        ======================================== */
+        .liquid {
+            background: linear-gradient(180deg, var(--black-light) 0%, var(--black) 50%, var(--black-light) 100%);
+            padding: 6rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .liquid::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: 
+                radial-gradient(ellipse at 30% 20%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(168, 85, 247, 0.05) 0%, transparent 50%);
+        }
+
+        .liquid-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .liquid-hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .liquid-tagline {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.3rem;
+            color: var(--gold);
+            letter-spacing: 0.2em;
+        }
+
+        .liquid-description {
+            font-size: 1.4rem;
+            color: var(--gray-300);
+            text-align: center;
+            max-width: 900px;
+            margin: 2rem auto 4rem;
+            line-height: 1.9;
+        }
+
+        .liquid-description strong {
+            color: var(--white);
+        }
+
+        .liquid-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+            margin: 3rem 0;
+            padding: 2.5rem;
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid var(--cyan);
+        }
+
+        .flow-node {
+            background: var(--gray-800);
+            border: 1px solid var(--gray-600);
+            padding: 1.2rem 2rem;
+            text-align: center;
+            min-width: 140px;
+        }
+
+        .flow-node.active {
+            border-color: var(--cyan);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+
+        .flow-node .icon {
+            font-size: 2rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .flow-node .label {
+            font-size: 1rem;
+            color: var(--gray-300);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .flow-arrow {
+            font-size: 2rem;
+            color: var(--gold);
+        }
+
+        .liquid-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .liquid-feature {
+            background: var(--black);
+            border: 1px solid var(--gray-700);
+            padding: 2.5rem;
+            position: relative;
+        }
+
+        .liquid-feature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--cyan), var(--purple));
+        }
+
+        .liquid-feature h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: var(--cyan);
+            margin-bottom: 0.8rem;
+        }
+
+        .liquid-feature p {
+            font-size: 1.1rem;
+            color: var(--gray-300);
+        }
+
+        /* ========================================
+           MARS SECTION
+        ======================================== */
+        .mars {
+            background: var(--black);
+            padding: 6rem 4rem;
+            text-align: center;
+        }
+
+        .mars-box {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.1) 0%, rgba(239, 68, 68, 0.1) 100%);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            padding: 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mars-box::before {
+            content: '🔴';
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 4rem;
+            opacity: 0.3;
+        }
+
+        .mars-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            color: var(--purple);
+            margin-bottom: 2rem;
+        }
+
+        .mars-text {
+            font-size: 1.4rem;
+            color: var(--white);
+            margin-bottom: 2rem;
+            line-height: 1.9;
+        }
+
+        .mars-highlight {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.8rem;
+            color: var(--teal);
+            margin: 2rem 0;
+            text-shadow: 0 0 20px rgba(0, 255, 170, 0.5);
+        }
+
+        .mars-explanation {
+            font-size: 1.2rem;
+            color: var(--gray-300);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* ========================================
+           PILLARS SECTION
+        ======================================== */
+        .pillars {
+            background: linear-gradient(180deg, var(--black-light) 0%, var(--black) 100%);
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+        }
+
+        .pillar-card {
+            background: var(--black);
+            border: 1px solid var(--gray-700);
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--gold);
+        }
+
+        .pillar-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--gold);
+            letter-spacing: 0.2em;
+            margin-bottom: 1rem;
+        }
+
+        .pillar-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .pillar-card h3 .highlight { color: var(--cyan); }
+
+        .pillar-card p {
+            font-size: 1.15rem;
+            color: var(--gray-300);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .pillar-formula {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.4rem;
+            color: var(--teal);
+            background: rgba(0, 255, 170, 0.1);
+            padding: 1rem 1.5rem;
+            border-left: 4px solid var(--teal);
+        }
+
+        .pillar-list {
+            list-style: none;
+        }
+
+        .pillar-list li {
+            font-size: 1.1rem;
+            color: var(--gray-300);
+            padding: 0.6rem 0;
+            padding-left: 1.8rem;
+            position: relative;
+        }
+
+        .pillar-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+
+        /* ========================================
+           QUANTUM SECTION
+        ======================================== */
+        .quantum {
+            background: var(--black);
+            text-align: center;
+        }
+
+        .quantum-box {
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            padding: 5rem;
+            position: relative;
+        }
+
+        .quantum-box::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 20%;
+            right: 20%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+        }
+
+        .quantum-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2.5rem;
+            color: var(--cyan);
+            letter-spacing: 0.05em;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+        }
+
+        .quantum-text {
+            font-size: 1.3rem;
+            color: var(--white);
+            margin-bottom: 2rem;
+            line-height: 1.9;
+        }
+
+        .quantum-emphasis {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        /* ========================================
+           APPLICATIONS SECTION
+        ======================================== */
+        .applications {
+            background: var(--black-light);
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .app-card {
+            background: var(--black);
+            border: 1px solid var(--gray-700);
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .app-card:hover {
+            border-color: var(--gold);
+        }
+
+        .app-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .app-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: var(--gold);
+            margin-bottom: 0.8rem;
+        }
+
+        .app-card p {
+            font-size: 1.05rem;
+            color: var(--gray-300);
+        }
+
+        /* ========================================
+           PORTFOLIO SECTION
+        ======================================== */
+        .portfolio {
+            background: var(--black);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1.2rem;
+            margin-bottom: 3rem;
+        }
+
+        .division-card {
+            background: var(--gray-800);
+            border: 1px solid var(--gray-700);
+            padding: 2rem 1rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .division-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+        }
+
+        .division-card.privacy::before { background: #00d4ff; }
+        .division-card.quantum-div::before { background: #a855f7; }
+        .division-card.tactical::before { background: #22c55e; }
+        .division-card.mesh::before { background: #eab308; }
+        .division-card.fortress::before { background: #ef4444; }
+        .division-card.core::before { background: #f97316; }
+        .division-card.tute::before { background: #00ffaa; }
+
+        .division-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .division-count {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: var(--gold);
+        }
+
+        .division-label {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+        }
+
+        .portfolio-total {
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(135deg, rgba(201, 169, 98, 0.1) 0%, rgba(201, 169, 98, 0.05) 100%);
+            border: 1px solid rgba(201, 169, 98, 0.3);
+        }
+
+        .portfolio-total-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 6rem;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .portfolio-total-label {
+            font-size: 1.1rem;
+            color: var(--gray-300);
+            letter-spacing: 0.1em;
+        }
+
+        /* ========================================
+           CONTACT SECTION
+        ======================================== */
+        .contact {
+            background: linear-gradient(180deg, var(--black) 0%, var(--black-light) 100%);
+            text-align: center;
+            padding: 6rem 4rem;
+        }
+
+        .contact-box {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--gray-800);
+            border: 1px solid var(--gold-dark);
+            padding: 5rem;
+        }
+
+        .contact h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-era {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            font-style: italic;
+            color: var(--cyan);
+            margin-bottom: 2rem;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            color: var(--gray-300);
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.1rem;
+            color: var(--white);
+        }
+
+        .contact-info a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* ========================================
+           FOOTER
+        ======================================== */
+        footer {
+            text-align: center;
+            padding: 3rem;
+            border-top: 1px solid var(--gray-800);
+        }
+
+        .footer-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            letter-spacing: 0.3em;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .footer-legal {
+            font-size: 0.95rem;
+            color: var(--gray-500);
+        }
+
+        /* ========================================
+           RESPONSIVE
+        ======================================== */
+        @media (max-width: 1024px) {
+            .pillars-grid { grid-template-columns: 1fr; }
+            .apps-grid { grid-template-columns: repeat(2, 1fr); }
+            .portfolio-grid { grid-template-columns: repeat(4, 1fr); }
+            .pieuvre-powers { grid-template-columns: repeat(2, 1fr); }
+            .liquid-features { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            body { font-size: 16px; }
+            section { padding: 4rem 2rem; }
+            .cover-revolution { font-size: 2.5rem; }
+            .cover-stats { flex-direction: column; gap: 2rem; }
+            .problem-grid { grid-template-columns: 1fr; }
+            .problem-highlight { grid-column: span 1; }
+            .apps-grid { grid-template-columns: 1fr; }
+            .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+            .quantum-box { padding: 3rem; }
+            .pieuvre-powers { grid-template-columns: 1fr; }
+            .liquid-flow { flex-direction: column; }
+            .flow-arrow { transform: rotate(90deg); }
+            .section-title { font-size: 2.5rem; }
+        }
+
+        /* Print styles */
+        @media print {
+            body { background: white; color: black; font-size: 12pt; }
+            .cover { min-height: auto; page-break-after: always; }
+            section { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========================================
+         COVER PAGE
+    ======================================== -->
+    <section class="cover">
+        <div class="cover-content">
+            
+            <div class="cover-logo">
+                <img src="AION_HERO_ANIMATED.gif" alt="AION ASEMANTIX - Harvest Now, Decrypt Never">
+            </div>
+            
+            <p class="cover-revolution">L'Ordinateur Liquide</p>
+            
+            <div class="cover-stats">
+                <div class="stat-item">
+                    <div class="stat-number">35</div>
+                    <div class="stat-label">BREVETS DÉPOSÉS</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">DIVISIONS</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">DURÉE DE PROTECTION</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cover-footer">© 2026 AION ASEMANTIX™ • Tous droits réservés</div>
+    </section>
+
+    <!-- ========================================
+         PROBLEM SECTION
+    ======================================== -->
+    <section class="problem">
+        <div class="section-header">
+            <div class="section-number">01 • LE CONSTAT</div>
+            <h2 class="section-title">Le monde numérique est <span class="gold">prisonnier</span></h2>
+            <p class="section-subtitle">L'architecture actuelle d'Internet enchaîne toutes les communications à une infrastructure traçable</p>
+        </div>
+        
+        <div class="problem-grid">
+            <div class="problem-card">
+                <h3>Adresses IP : votre empreinte digitale</h3>
+                <p>Chaque connexion révèle votre identité, votre localisation, vos habitudes. Les métadonnées sont plus révélatrices que le contenu lui-même.</p>
+            </div>
+            <div class="problem-card">
+                <h3>Infrastructure en étoile</h3>
+                <p>Dépendance aux serveurs centraux : NTP, DNS, GPS. Points uniques de défaillance, de surveillance, de contrôle. Une araignée au centre de sa toile.</p>
+            </div>
+            <div class="problem-card">
+                <h3>Chiffrement : une illusion temporaire</h3>
+                <p>Les ordinateurs quantiques casseront RSA et ECC. Les agences stockent aujourd'hui pour déchiffrer demain. Votre passé vous rattrapera.</p>
+            </div>
+            <div class="problem-card">
+                <h3>Identifiants : des chaînes invisibles</h3>
+                <p>IMSI, MAC, cookies, empreintes navigateur. Chaque réseau trace, chaque handover expose, chaque connexion trahit votre présence.</p>
+            </div>
+            <div class="problem-highlight">
+                <h3>⚠️ "HARVEST NOW, DECRYPT LATER"</h3>
+                <p>Les services de renseignement stockent massivement les communications chiffrées.<br>D'ici 2030, les ordinateurs quantiques pourront tout lire. <strong>Votre passé n'a aucune protection.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         PIEUVRE SECTION
+    ======================================== -->
+    <section class="pieuvre">
+        <div class="section-header">
+            <div class="section-number">02 • LA MÉTAPHORE</div>
+            <h2 class="section-title">La <span class="gold">Pieuvre</span></h2>
+            <p class="section-subtitle">Une architecture biomimétique inspirée du prédateur le plus insaisissable des océans</p>
+        </div>
+        
+        <div class="pieuvre-intro">
+            <p class="pieuvre-quote">
+                "La pieuvre n'a pas un cerveau, elle en a neuf. Elle ne possède pas un bras, elle en commande huit, 
+                chacun pensant de façon autonome. Elle ne fuit pas ses prédateurs — elle disparaît."
+            </p>
+        </div>
+        
+        <div class="pieuvre-powers">
+            <div class="power-card">
+                <span class="power-icon">🧠</span>
+                <h4>9 cerveaux</h4>
+                <p>Intelligence distribuée. Pas de point central de défaillance. Chaque nœud est autonome et peut décider seul.</p>
+            </div>
+            <div class="power-card">
+                <span class="power-icon">🎨</span>
+                <h4>Métamorphose</h4>
+                <p>Change de couleur, de texture, de forme en millisecondes. Devient rocher, algue, corail. <strong>Invisible à volonté.</strong></p>
+            </div>
+            <div class="power-card">
+                <span class="power-icon">🌑</span>
+                <h4>Encre d'attaque</h4>
+                <p>Projette un nuage opaque pour aveugler l'ennemi. S'enfuit pendant qu'il cherche dans le noir. <strong>Défense offensive.</strong></p>
+            </div>
+            <div class="power-card">
+                <span class="power-icon">🦑</span>
+                <h4>8 bras opportunistes</h4>
+                <p>Canaux multiples et indépendants. Chaque bras explore, saisit, communique. <strong>Impossible à capturer entièrement.</strong></p>
+            </div>
+        </div>
+        
+        <div class="pieuvre-summary">
+            <p>
+                <strong>AION ASEMANTIX</strong> applique ces principes au numérique :<br><br>
+                Nos données <span class="highlight">se métamorphosent</span> en bruit statistique — invisibles.<br>
+                Nos fragments <span class="highlight">voyagent sur 8 canaux</span> — insaisissables.<br>
+                Notre encre <span class="highlight">aveugle les attaquants</span> — ils ne savent même pas qu'ils cherchent.<br>
+                Nos 9 cerveaux <span class="highlight">fonctionnent sans centre</span> — incassables.
+            </p>
+        </div>
+    </section>
+
+    <!-- ========================================
+         LIQUID COMPUTER SECTION
+    ======================================== -->
+    <section class="liquid">
+        <div class="liquid-content">
+            <div class="section-header">
+                <div class="section-number">03 • LA RÉVOLUTION</div>
+                <h2 class="section-title">L'<span class="cyan">Ordinateur Liquide</span></h2>
+                <p class="section-subtitle">Une computation qui s'affranchit de toute matière, de toute infrastructure, de toute frontière</p>
+            </div>
+            
+            <div class="liquid-hero">
+                <p class="liquid-tagline">ÉCHAPPER À LA TOILE • DEVENIR L'EAU</p>
+            </div>
+            
+            <p class="liquid-description">
+                L'informatique traditionnelle est <strong>solide</strong> : serveurs fixes, adresses permanentes, connexions traçables.<br><br>
+                AION ASEMANTIX introduit l'<strong>Ordinateur Liquide</strong> : une computation qui coule entre les réseaux, 
+                change de forme à chaque instant, ne laisse aucune trace, et ne peut être contenue par aucun récipient.
+            </p>
+            
+            <div class="liquid-flow">
+                <div class="flow-node">
+                    <div class="icon">📡</div>
+                    <div class="label">Radio</div>
+                </div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-node active">
+                    <div class="icon">💎</div>
+                    <div class="label">Optique</div>
+                </div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-node">
+                    <div class="icon">🌐</div>
+                    <div class="label">HTTP</div>
+                </div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-node">
+                    <div class="icon">🛰️</div>
+                    <div class="label">Satellite</div>
+                </div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-node active">
+                    <div class="icon">🔴</div>
+                    <div class="label">Mars</div>
+                </div>
+            </div>
+            
+            <div class="liquid-features">
+                <div class="liquid-feature">
+                    <h4>Voyage en radio</h4>
+                    <p>Les fragments démarrent leur course sur les ondes hertziennes — invisibles, omniprésents, impossibles à bloquer.</p>
+                </div>
+                <div class="liquid-feature">
+                    <h4>Rebondit en optique</h4>
+                    <p>Transition vers la fibre, la lumière, les réseaux backbone. Changement de médium, changement d'identité.</p>
+                </div>
+                <div class="liquid-feature">
+                    <h4>Atterrit en HTTP</h4>
+                    <p>Reconstitution possible uniquement par le destinataire légitime. Pour tous les autres : du bruit blanc.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         MARS SECTION
+    ======================================== -->
+    <section class="mars">
+        <div class="section-header">
+            <div class="section-number">04 • L'IMPOSSIBLE DEVIENT POSSIBLE</div>
+            <h2 class="section-title">Communiquer avec <span class="gold">Mars</span></h2>
+        </div>
+        
+        <div class="mars-box">
+            <h3 class="mars-title">SANS CONNEXION INTERNET</h3>
+            
+            <p class="mars-text">
+                L'architecture AION permet une communication interplanétaire 
+                sans dépendre d'une infrastructure Internet centralisée.<br><br>
+                Comment ? Parce que nos fragments sont <strong>autonomes</strong>.
+            </p>
+            
+            <p class="mars-highlight">Radio → Satellite → Deep Space Network → Mars</p>
+            
+            <p class="mars-explanation">
+                Chaque fragment porte son propre contexte, sa propre temporalité (τ), sa propre identité éphémère.
+                Il n'a besoin d'aucun serveur central, d'aucun DNS, d'aucun NTP.<br><br>
+                Un fragment peut voyager pendant 20 minutes vers Mars, être stocké, rebondir vers un rover, 
+                et être reconstitué des mois plus tard — <strong>sans jamais avoir touché Internet</strong>.
+            </p>
+        </div>
+    </section>
+
+    <!-- ========================================
+         PILLARS SECTION
+    ======================================== -->
+    <section class="pillars">
+        <div class="section-header">
+            <div class="section-number">05 • LES PILIERS TECHNOLOGIQUES</div>
+            <h2 class="section-title">Quatre innovations <span class="gold">fondamentales</span></h2>
+        </div>
+        
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <div class="pillar-number">PILIER 01</div>
+                <h3>L'<span class="highlight">Asémanticité</span></h3>
+                <p>Les données sont transformées pour être statistiquement indistinguables du bruit cosmique. 
+                Aucun observateur — humain, machine, ou quantique — ne peut déterminer s'il y a un signal.</p>
+                <ul class="pillar-list">
+                    <li>Fragments sans signification intrinsèque</li>
+                    <li>Distribution statistique = bruit blanc</li>
+                    <li>Zéro métadonnée exploitable</li>
+                    <li>Reconstitution uniquement par le destinataire</li>
+                </ul>
+            </div>
+            
+            <div class="pillar-card">
+                <div class="pillar-number">PILIER 02</div>
+                <h3>L'<span class="highlight">Horloge Énergétique</span></h3>
+                <p>Le temps n'est plus dicté par l'extérieur (NTP, GPS) mais dérivé de la consommation énergétique locale. 
+                Une référence temporelle souveraine, inviolable, et non manipulable.</p>
+                <div class="pillar-formula">τ = E / (P_nom + ε)</div>
+                <ul class="pillar-list">
+                    <li>Indépendant de toute infrastructure</li>
+                    <li>Strictement monotone croissant</li>
+                    <li>Impossible à prédire ou falsifier</li>
+                    <li>Synchronisation sans serveur central</li>
+                </ul>
+            </div>
+            
+            <div class="pillar-card">
+                <div class="pillar-number">PILIER 03</div>
+                <h3>Les <span class="highlight">Canaux Opportunistes</span></h3>
+                <p>Communication via tous les réseaux disponibles avec identifiants non corrélables et handover aveugle. 
+                La pieuvre utilise tous ses bras simultanément.</p>
+                <ul class="pillar-list">
+                    <li>Satellite (LEO, MEO, GEO)</li>
+                    <li>Cellulaire (4G, 5G, 6G)</li>
+                    <li>WiFi, LoRa, Mesh, Bluetooth</li>
+                    <li>Optique, radio, acoustique</li>
+                    <li>Bascule transparente et non traçable</li>
+                </ul>
+            </div>
+            
+            <div class="pillar-card">
+                <div class="pillar-number">PILIER 04</div>
+                <h3>La <span class="highlight">Fragmentation Multi-Réseaux</span></h3>
+                <p>Les données sont fragmentées et distribuées sur plusieurs réseaux indépendants. 
+                Aucun opérateur, aucune agence, aucun État ne voit l'ensemble.</p>
+                <ul class="pillar-list">
+                    <li>Fragments distribués sur N réseaux</li>
+                    <li>Reconstitution impossible par un seul acteur</li>
+                    <li>Redondance configurable</li>
+                    <li>Résistance aux coupures et censure</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         QUANTUM SECTION
+    ======================================== -->
+    <section class="quantum">
+        <div class="section-header">
+            <div class="section-number">06 • SÉCURITÉ POST-QUANTIQUE</div>
+            <h2 class="section-title">Harvest Now, <span class="gold">Decrypt Never</span></h2>
+        </div>
+        
+        <div class="quantum-box">
+            <h3 class="quantum-title">NOTRE PROMESSE</h3>
+            <p class="quantum-text">
+                Les agences de renseignement stockent aujourd'hui les communications chiffrées 
+                en attendant que les ordinateurs quantiques puissent les déchiffrer.<br><br>
+                <strong>Avec AION ASEMANTIX, même un ordinateur quantique ne peut rien décrypter.</strong><br><br>
+                Pourquoi ? Parce qu'il n'y a rien à décrypter. Les données interceptées sont 
+                statistiquement identiques à du bruit aléatoire. Pas de structure, pas de pattern, pas de secret caché.
+            </p>
+            <p class="quantum-emphasis">
+                Quoi qu'ils cassent, ce sera du bruit.
+            </p>
+        </div>
+    </section>
+
+    <!-- ========================================
+         APPLICATIONS SECTION
+    ======================================== -->
+    <section class="applications">
+        <div class="section-header">
+            <div class="section-number">07 • APPLICATIONS</div>
+            <h2 class="section-title">Marchés <span class="gold">stratégiques</span></h2>
+            <p class="section-subtitle">Une technologie transversale pour tous les secteurs où la souveraineté est vitale</p>
+        </div>
+        
+        <div class="apps-grid">
+            <div class="app-card">
+                <div class="app-icon">🏦</div>
+                <h4>Finance</h4>
+                <p>Transactions anonymes vérifiables. Protection des données bancaires. Conformité par divulgation sélective.</p>
+            </div>
+            <div class="app-card">
+                <div class="app-icon">🏥</div>
+                <h4>Santé</h4>
+                <p>Dossiers médicaux souverains. Échange patient-praticien sans tiers. Recherche sur données anonymisées.</p>
+            </div>
+            <div class="app-card">
+                <div class="app-icon">🏛️</div>
+                <h4>Défense & Gouvernement</h4>
+                <p>Communications classifiées. Infrastructure critique. Résilience nationale. Souveraineté totale.</p>
+            </div>
+            <div class="app-card">
+                <div class="app-icon">📡</div>
+                <h4>Télécommunications</h4>
+                <p>Internet mobile sans IP fixe. Couverture satellite + terrestre unifiée. Communication post-infrastructure.</p>
+            </div>
+            <div class="app-card">
+                <div class="app-icon">🚀</div>
+                <h4>Spatial</h4>
+                <p>Communication interplanétaire. Constellations autonomes. Rovers et sondes indépendants.</p>
+            </div>
+            <div class="app-card">
+                <div class="app-icon">📰</div>
+                <h4>Journalisme</h4>
+                <p>Protection des sources. Lanceurs d'alerte. Stockage sécurisé des preuves. Liberté de la presse.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         PORTFOLIO SECTION
+    ======================================== -->
+    <section class="portfolio">
+        <div class="section-header">
+            <div class="section-number">08 • PROPRIÉTÉ INTELLECTUELLE</div>
+            <h2 class="section-title">35 brevets • 7 <span class="gold">divisions</span></h2>
+            <p class="section-subtitle">Un écosystème complet et interconnecté — La Pieuvre brevetée</p>
+        </div>
+        
+        <div class="portfolio-grid">
+            <div class="division-card privacy">
+                <div class="division-name">PRIVACY</div>
+                <div class="division-count">6</div>
+                <div class="division-label">brevets</div>
+            </div>
+            <div class="division-card quantum-div">
+                <div class="division-name">QUANTUM</div>
+                <div class="division-count">5</div>
+                <div class="division-label">brevets</div>
+            </div>
+            <div class="division-card tactical">
+                <div class="division-name">TACTICAL</div>
+                <div class="division-count">5</div>
+                <div class="division-label">brevets</div>
+            </div>
+            <div class="division-card mesh">
+                <div class="division-name">MESH</div>
+                <div class="division-count">4</div>
+                <div class="division-label">brevets</div>
+            </div>
+            <div class="division-card fortress">
+                <div class="division-name">FORTRESS</div>
+                <div class="division-count">5</div>
+                <div class="division-label">brevets</div>
+            </div>
+            <div class="division-card core">
+                <div class="division-name">CORE</div>
+                <div class="division-count">4</div>
+                <div class="division-label">brevets</div>
+            </div>
+            <div class="division-card tute">
+                <div class="division-name">TUTE</div>
+                <div class="division-count">6</div>
+                <div class="division-label">brevets</div>
+            </div>
+        </div>
+        
+        <div class="portfolio-total">
+            <div class="portfolio-total-number">35</div>
+            <div class="portfolio-total-label">BREVETS DÉPOSÉS À L'INPI • FRANCE • 2024-2026</div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CONTACT SECTION
+    ======================================== -->
+    <section class="contact">
+        <div class="contact-box">
+            <h2>Entrons en contact</h2>
+            <p class="contact-era">L'ère de la souveraineté post-quantique a débuté.</p>
+            <p>
+                AION ASEMANTIX recherche des partenaires stratégiques — industriels, institutionnels, investisseurs — 
+                pour déployer l'Ordinateur Liquide et inaugurer l'ère de la tranquillité numérique.
+            </p>
+            <div class="contact-info">
+                <p><strong>AION ASEMANTIX™</strong></p>
+                <p>Lyon, France</p>
+                <p>Contact : <a href="mailto:asemantix@proton.me">asemantix@proton.me</a></p>
+                <p>Web : <a href="https://www.asemantix.tech" target="_blank">www.asemantix.tech</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+    <footer>
+        <div class="footer-logo">AION ASEMANTIX™</div>
+        <div class="footer-legal">
+            © 2026 AION ASEMANTIX. Tous droits réservés.<br>
+            AION, ASEMANTIX, LA PIEUVRE, L'ORDINATEUR LIQUIDE et "HARVEST NOW, DECRYPT NEVER" sont des marques déposées.<br>
+            Document confidentiel destiné aux partenaires et investisseurs potentiels.
+        </div>
+    </footer>
+
+</body>
+</html>
